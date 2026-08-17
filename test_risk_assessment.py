@@ -6,6 +6,8 @@ def test_critical_risk():
 
     assert score == 20
     assert level == "CRITICAL"
+
+
 def test_high_risk():
     score, level = calculate_risk(2, 5)
 
