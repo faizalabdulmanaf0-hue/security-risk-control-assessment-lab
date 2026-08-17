@@ -93,7 +93,7 @@ def generate_assessment(
     control_name,
     control_effectiveness
 ):
-    assessment = assess_security_risk(
+    return assess_security_risk(
         asset,
         threat,
         likelihood,
@@ -101,5 +101,3 @@ def generate_assessment(
         control_name,
         control_effectiveness
     )
-
-    return assessment
