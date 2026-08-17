@@ -24,3 +24,10 @@ def assess_control(control_name, effectiveness):
         "effectiveness": effectiveness,
         "status": status
     }
+
+
+def identify_control_gap(effectiveness):
+    if effectiveness < 3:
+        return True
+    else:
+        return False
