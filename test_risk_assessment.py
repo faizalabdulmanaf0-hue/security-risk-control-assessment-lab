@@ -17,4 +17,9 @@ def test_medium_risk():
     score, level = calculate_risk(2, 3)
 
     assert score == 6
-    assert level == "MEDIUM"
+    assert level == "MEDIUM
+def test_low_risk():
+    score, level = calculate_risk(1, 2)
+
+    assert score == 2
+    assert level == "LOW"
