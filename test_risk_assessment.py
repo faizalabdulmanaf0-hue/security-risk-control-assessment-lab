@@ -13,3 +13,8 @@ def test_high_risk():
 
     assert score == 10
     assert level == "HIGH"
+def test_medium_risk():
+    score, level = calculate_risk(2, 3)
+
+    assert score == 6
+    assert level == "MEDIUM"
