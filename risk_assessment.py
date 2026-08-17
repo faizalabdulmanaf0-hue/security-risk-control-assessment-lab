@@ -83,3 +83,23 @@ def assess_security_risk(
         "control_gap": control_gap,
         "mitigation": mitigation
     }
+
+
+def generate_assessment(
+    asset,
+    threat,
+    likelihood,
+    impact,
+    control_name,
+    control_effectiveness
+):
+    assessment = assess_security_risk(
+        asset,
+        threat,
+        likelihood,
+        impact,
+        control_name,
+        control_effectiveness
+    )
+
+    return assessment
