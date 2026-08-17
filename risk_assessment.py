@@ -28,3 +28,35 @@ def assess_control(control_name, effectiveness):
 
 def identify_control_gap(effectiveness):
     return effectiveness < 3
+
+
+def assess_security_risk(
+    asset,
+    threat,
+    likelihood,
+    impact,
+    control_name,
+    control_effectiveness
+):
+    risk_score, risk_level = calculate_risk(
+        likelihood,
+        impact
+    )
+
+    control = assess_control(
+        control_name,
+        control_effectiveness
+    )
+
+    control_gap = identify_control_gap(
+        control_effectiveness
+    )
+
+    return {
+        "asset": asset,
+        "threat": threat,
+        "risk_score": risk_score,
+        "risk_level": risk_level,
+        "control": control,
+        "control_gap": control_gap
+    }
