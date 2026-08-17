@@ -9,3 +9,18 @@ def calculate_risk(likelihood, impact):
         return score, "MEDIUM"
     else:
         return score, "LOW"
+
+
+def assess_control(control_name, effectiveness):
+    if effectiveness >= 4:
+        status = "EFFECTIVE"
+    elif effectiveness >= 2:
+        status = "PARTIALLY EFFECTIVE"
+    else:
+        status = "INEFFECTIVE"
+
+    return {
+        "control": control_name,
+        "effectiveness": effectiveness,
+        "status": status
+    }
